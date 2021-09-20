@@ -12,22 +12,47 @@
     <!-- THEOplayer library and css -->
     <script type="text/javascript" src="https://cdn.myth.theoplayer.com/0317c667-1e2c-4561-958b-940bf014e444/THEOplayer.js"></script>
     <link rel="stylesheet" type="text/css" href="https://cdn.myth.theoplayer.com/0317c667-1e2c-4561-958b-940bf014e444/ui.css" />
+
 <style>
-    .theoplayer-skin video {
+    .theoplayer-skin {
   object-fit: contain; /* default */
   /* object-fit: cover; // content outside of the container, hence some content might be missing from the container */
   /* object-fit: fill; // all content inside of the container, but the content might be deformed to be fitted inside of it */
+    }
+  
+  .background{
+      background-color: black;
+  }
+  
+  .container{
+      max-height:75%; 
+      max-width:75%;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 50px;
+  }
+  
+  .video {
+      max-width: 50%;
+      max-height: 50%;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 50px;
+      
+  }
 }
 </style>
 
 </head>
 
-<body>
-
-    <div class="theoplayer-container video-js theoplayer-skin vjs-16-9 element"></div>
-	<div class="theoplayer-container2 video-js theoplayer-skin vjs-16-9 element2"></div>
-	<div class="theoplayer-container3 video-js theoplayer-skin vjs-16-9 element2"></div>
-	<div class="theoplayer-container4 video-js theoplayer-skin vjs-16-9 element2"></div>
+<body class="background">
+    
+    <div class="container">   
+    <div class="theoplayer-container video-js theoplayer-skin vjs-16-9 element video"></div> 
+	<div class="theoplayer-container2 video-js theoplayer-skin vjs-16-9 element2 video"></div>
+	<div class="theoplayer-container3 video-js theoplayer-skin vjs-16-9 element3 video"></div>
+	<div class="theoplayer-container4 video-js theoplayer-skin vjs-16-9 element4 video"></div>
+	</div>
 	
     <script>
         var element1 = document.querySelector(".theoplayer-container");
