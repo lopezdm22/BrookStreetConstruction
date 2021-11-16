@@ -7,11 +7,13 @@
 </head>
 <body>
 
-<div id="my-player"></div>
+<div id="my-player1"></div>
+<div id="my-player2"></div>
 
 <script type="text/javascript">
 
-const container = document.getElementById('my-player');
+const container1 = document.getElementById('my-player1');
+const container2 = document.getElementById('my-player2');
 
 const playerConfig1 = {
     key: 'a28f26e7-80af-4978-abd5-fb76179db43a',
@@ -37,8 +39,8 @@ const source2 = {
     hls: 'https://612f6e1c3ea15.streamlock.net/PACConstruction/SMIL:1005FMPACProjectInterior.smil/playlist.m3u8'
 };
 
-const player1 = new bitmovin.player.Player(container, playerConfig1);
-const player2 = new bitmovin.player.Player(container, playerConfig2);
+const player1 = new bitmovin.player.Player(container1, playerConfig1);
+const player2 = new bitmovin.player.Player(container2, playerConfig2);
 
 player1.load(source1).then(
     player => {
