@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+	
+	<!-- The text shown in the Browser Tab -->
+    <title>Brook Street Construction</title>
+	
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Chromecast SDK -->
+    <script type="text/javascript" src="//www.gstatic.com/cv/js/sender/v1/cast_sender.js?loadCastFramework=1"></script>
+
+    <!-- THEOplayer library and css -->
+    <script type="text/javascript" src="https://cdn.myth.theoplayer.com/0317c667-1e2c-4561-958b-940bf014e444/THEOplayer.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.myth.theoplayer.com/0317c667-1e2c-4561-958b-940bf014e444/ui.css" />
+
+<!-- This section styles the page as well as the player windows -->
+<style>
+	/* Theoplayer CSS to fit the player to the size of the container */
+    .theoplayer-skin {
+  object-fit: contain; /* default */
+  /* object-fit: cover; // content outside of the container, hence some content might be missing from the container */
+  /* object-fit: fill; // all content inside of the container, but the content might be deformed to be fitted inside of it */
+    }
+  
+  /* CSS to set the page background to black */
+  .background{
+      background-color: black;
+  }
+  
+  /* CSS to set container div size */
+  .container{
+      max-height:75%; 
+      max-width:75%;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 50px;
+  }
+  
+  /* CSS to set the player div size */
+  .video {
+      max-width: 50%;
+      max-height: 50%;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 50px;
+      
+  }
+  
+  /* CSS to set the color and alignment of the header text */
+  .header-color{
+      color: white;
+      text-align: center;
+  }
+}
+</style>
+</head>
+
+<body class="background">
+    
+	<!-- Header Text -->
+    <h1 class="header-color">Brook Street Residence Project</h1>
+	
+	<!-- Div that contains the video players -->
+    <div class="container">   
+	
+	<!-- Video Players -->
+    <div class="theoplayer-container video-js theoplayer-skin vjs-16-9 element video"></div> 
+	<div class="theoplayer-container4 video-js theoplayer-skin vjs-16-9 element4 video"></div>
+	<div class="theoplayer-container2 video-js theoplayer-skin vjs-16-9 element2 video"></div>
+	<div class="theoplayer-container3 video-js theoplayer-skin vjs-16-9 element3 video"></div>
+	
+	
+	</div>
+	
+    <script>
+	
+		//Elements are used to select the correct Theoplayer container
+        var element1 = document.querySelector(".theoplayer-container");
+		var element2 = document.querySelector(".theoplayer-container2");
+		var element3 = document.querySelector(".theoplayer-container3");
+		var element4 = document.querySelector(".theoplayer-container4");
+		
+        //Each Player needs to be created seperately
+		var player1 = new THEOplayer.Player(element1, {
+            libraryLocation: "https://cdn.myth.theoplayer.com/0317c667-1e2c-4561-958b-940bf014e444",
+            license: "sZP7IYe6T6PKIlxK3uaoCZzo3QfrFSaZ0Qh-TuarTOzzCoft3Sao0Laz3oB6FOPlUY3zWokgbgjNIOf9fKC_CSUKIS3KFS5t3of-3uUK0Ok6TQ0rFSbt3QfZIlakCL5L3OfVfK4_bQgZCYxNWoryIQXzImf90SCL3let0uai0u5i0Oi6Io4pIYP1UQgqWgjeCYxgflEc3l0c3l0ZTSbr3S0zFOPeWok1dDrLYtA1Ioh6TgV6v6fVfKcqCoXVdQjLUOfVfGxEIDjiWQXrIYfpCoj-fgzVfKxqWDXNWG3ybojkbK3gflNWf6E6FOPVWo31WQ1qbta6FOPzdQ4qbQc1sD4ZFK3qWmPUFOPLIQ-LflNWfK1zWDikfgzVfG3gWKxydDkibK4LbogqW6f9UwPkIYz"
+		});
+		
+		var player4 = new THEOplayer.Player(element4, {
+            libraryLocation: "https://cdn.myth.theoplayer.com/0317c667-1e2c-4561-958b-940bf014e444",
+            license: "sZP7IYe6T6PKIlxK3uaoCZzo3QfrFSaZ0Qh-TuarTOzzCoft3Sao0Laz3oB6FOPlUY3zWokgbgjNIOf9fKC_CSUKIS3KFS5t3of-3uUK0Ok6TQ0rFSbt3QfZIlakCL5L3OfVfK4_bQgZCYxNWoryIQXzImf90SCL3let0uai0u5i0Oi6Io4pIYP1UQgqWgjeCYxgflEc3l0c3l0ZTSbr3S0zFOPeWok1dDrLYtA1Ioh6TgV6v6fVfKcqCoXVdQjLUOfVfGxEIDjiWQXrIYfpCoj-fgzVfKxqWDXNWG3ybojkbK3gflNWf6E6FOPVWo31WQ1qbta6FOPzdQ4qbQc1sD4ZFK3qWmPUFOPLIQ-LflNWfK1zWDikfgzVfG3gWKxydDkibK4LbogqW6f9UwPkIYz"
+        });
+		
+		var player2 = new THEOplayer.Player(element2, {
+            libraryLocation: "https://cdn.myth.theoplayer.com/0317c667-1e2c-4561-958b-940bf014e444",
+            license: "sZP7IYe6T6PKIlxK3uaoCZzo3QfrFSaZ0Qh-TuarTOzzCoft3Sao0Laz3oB6FOPlUY3zWokgbgjNIOf9fKC_CSUKIS3KFS5t3of-3uUK0Ok6TQ0rFSbt3QfZIlakCL5L3OfVfK4_bQgZCYxNWoryIQXzImf90SCL3let0uai0u5i0Oi6Io4pIYP1UQgqWgjeCYxgflEc3l0c3l0ZTSbr3S0zFOPeWok1dDrLYtA1Ioh6TgV6v6fVfKcqCoXVdQjLUOfVfGxEIDjiWQXrIYfpCoj-fgzVfKxqWDXNWG3ybojkbK3gflNWf6E6FOPVWo31WQ1qbta6FOPzdQ4qbQc1sD4ZFK3qWmPUFOPLIQ-LflNWfK1zWDikfgzVfG3gWKxydDkibK4LbogqW6f9UwPkIYz"
+        });
+		
+		var player3 = new THEOplayer.Player(element3, {
+            libraryLocation: "https://cdn.myth.theoplayer.com/0317c667-1e2c-4561-958b-940bf014e444",
+            license: "sZP7IYe6T6PKIlxK3uaoCZzo3QfrFSaZ0Qh-TuarTOzzCoft3Sao0Laz3oB6FOPlUY3zWokgbgjNIOf9fKC_CSUKIS3KFS5t3of-3uUK0Ok6TQ0rFSbt3QfZIlakCL5L3OfVfK4_bQgZCYxNWoryIQXzImf90SCL3let0uai0u5i0Oi6Io4pIYP1UQgqWgjeCYxgflEc3l0c3l0ZTSbr3S0zFOPeWok1dDrLYtA1Ioh6TgV6v6fVfKcqCoXVdQjLUOfVfGxEIDjiWQXrIYfpCoj-fgzVfKxqWDXNWG3ybojkbK3gflNWf6E6FOPVWo31WQ1qbta6FOPzdQ4qbQc1sD4ZFK3qWmPUFOPLIQ-LflNWfK1zWDikfgzVfG3gWKxydDkibK4LbogqW6f9UwPkIYz"
+        });
+
+        // OPTIONAL CONFIGURATION
+
+        // Customized video player parameters
+		
+		//In order to Autoplay each Player must be set to both Autoplay and Mute
+		player1.autoplay = true;
+		player1.muted = true;
+		player2.autoplay = true;
+		player2.muted = true;
+		player3.autoplay = true;
+		player3.muted = true;
+		player4.autoplay = true;
+		player4.muted = true;
+		
+		//Each Player should have its own Source URI
+        player1.source = {
+            sources: [{
+				//Enter the stream provided by PSTech here between the quotation marks "" after src
+                "src": "https://612f6e1c3ea15.streamlock.net/BrookStreetConstruction/SMIL:1000BrookStResProjectSRH.smil/playlist.m3u8",
+                "type": "application/x-mpegurl",
+                "lowLatency": false
+            }]
+
+        };
+
+		player2.source = {
+			sources: [{
+				//Enter the stream provided by PSTech here between the quotation marks "" after src
+				"src": "https://612f6e1c3ea15.streamlock.net/BrookStreetConstruction/SMIL:1001BrookStResProjectVGQC.smil/playlist.m3u8",
+				"type": "application/x-mpegurl",
+				"lowLatency": false
+			}]
+
+		};
+		
+		player3.source = {
+			sources: [{
+				//Enter the stream provided by PSTech here between the quotation marks "" after src
+				"src": "https://612f6e1c3ea15.streamlock.net/BrookStreetConstruction/SMIL:1002BrookStResProjectVGQP.smil/playlist.m3u8",
+				"type": "application/x-mpegurl",
+				"lowLatency": false
+			}]
+
+		};
+		
+		player4.source = {
+			sources: [{
+				//Enter the stream provided by PSTech here between the quotation marks "" after src
+				"src": "https://612f6e1c3ea15.streamlock.net/BrookStreetConstruction/SMIL:1003BrookStResProjectBH.smil/playlist.m3u8",
+				"type": "application/x-mpegurl",
+				"lowLatency": false
+			}]
+
+		};			
+    </script>
+</body>
+</html>
