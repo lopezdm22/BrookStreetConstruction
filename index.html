@@ -5,28 +5,21 @@
    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
    <script type="text/javascript" src="https://cdn.bitmovin.com/player/web/8/bitmovinplayer.js"></script>
 </head>
-
 <body>
-
 <div id="my-player"></div>
-
 <script type="text/javascript">
-
 const container = document.getElementById('my-player');
-
 const playerConfig = {
-    key: 'a28f26e7-80af-4978-abd5-fb76179db43a'
+    key: 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx'
 };
-
 const source = {
-    title: "PAC Project Interior 1004",
+    title: "Getting Started with the Bitmovin Player",
     description: "Now you are ready to embed the Bitmovin Player into your own website :)",
     dash: 'https://bitmovin-a.akamaihd.net/content/MI201109210084_1/mpds/f08e80da-bf1d-4e3d-8899-f0f6155f6efa.mpd',
-    hls: 'https://612f6e1c3ea15.streamlock.net/PACConstruction/SMIL:1004FMPACProjectInterior.smil/playlist.m3u8,
+    hls: 'https://bitmovin-a.akamaihd.net/content/MI201109210084_1/m3u8s/f08e80da-bf1d-4e3d-8899-f0f6155f6efa.m3u8',
     progressive: 'https://bitmovin-a.akamaihd.net/content/MI201109210084_1/MI201109210084_mpeg-4_hd_high_1080p25_10mbits.mp4',
     poster: 'https://bitmovin-a.akamaihd.net/content/MI201109210084_1/poster.jpg'
 };
-
 const player = new bitmovin.player.Player(container, playerConfig);
  
 player.load(source).then(
@@ -37,9 +30,6 @@ player.load(source).then(
         console.log('Error while creating Bitmovin Player instance')
     }
 );
-
-
 </script>
-
 </body>
 </html>
